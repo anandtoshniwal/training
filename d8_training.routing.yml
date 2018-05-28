@@ -22,3 +22,16 @@ d8_training.node_detail:
     _title: 'Node Detail'
   requirements:
     _permission: 'access content'
+
+d8_training.multiple_nids:
+  path: '/list/{node1}/{node2}'
+  defaults:
+    _controller: '\Drupal\d8_training\Controller\NodeDetailController::multiple_nodes'
+  requirements:
+      _permission: 'access content'
+  options:
+    parameters:
+      node1:
+        type: entity:node
+      node2:
+        type: entity:node

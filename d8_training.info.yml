@@ -1,0 +1,6 @@
+name: D8 Training
+description: Covers different concepts of D8.
+package: Training
+
+type: module
+core: 8.x

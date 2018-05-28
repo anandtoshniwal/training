@@ -5,3 +5,20 @@ static.content:
     _title: 'Static Content Page'
   requirements:
     _permission: 'access content'
+
+d8_training.dynamic_content:
+  path: '/arg-demo/{arg1}'
+  defaults:
+    _controller: 'Drupal\d8_training\Controller\DynamicMenuController::content'
+    _title: 'Dynamic listing'
+    arg1: 'node'
+  requirements:
+    _permission: 'access content'
+
+d8_training.node_detail:
+  path: '/list/{node}'
+  defaults:
+    _controller: '\Drupal\d8_training\Controller\NodeDetailController::content'
+    _title: 'Node Detail'
+  requirements:
+    _permission: 'access content'

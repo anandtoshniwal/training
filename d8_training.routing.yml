@@ -1,0 +1,7 @@
+static.content:
+  path: '/static-content'
+  defaults:
+    _controller: '\Drupal\d8_training\Controller\StaticMenuController::content'
+    _title: 'Static Content Page'
+  requirements:
+    _permission: 'access content'

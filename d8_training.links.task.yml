@@ -1,11 +1,11 @@
 d8_training.static_content:
   title: 'Tab 1'
-  route_name: static.content
-  base_route: static.content
+  route_name: d8_training.static_content
+  base_route: d8_training.static_content
   weight: 1
 
 d8_training.dynamic_content:
   title: 'Tab 2'
   route_name: d8_training.dynamic_content
-  base_route: static.content
+  base_route: d8_training.static_content
   weight: 2

@@ -1,0 +1,5 @@
+d8_training.add_page:
+  route_name: node.add_page
+  title: 'Add content'
+  appears_on:
+    - d8_training.node_detail

@@ -31,7 +31,7 @@ class NodeDetailController extends ControllerBase{
    * @return array
    *   The render array.
    */
-  public function multiple_nodes(NodeInterface $node1, NodeInterface $node2)  {
+  public function multipleNodes(NodeInterface $node1, NodeInterface $node2)  {
     $build = [
       '#markup' => t('Node1: @title1 </br> node2: @title2 ', array('@title1' => $node1->getTitle(), '@title2' => $node2->getTitle())),
     ];

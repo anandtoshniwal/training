@@ -1,4 +1,4 @@
-static.content:
+d8_training.static_content:
   path: '/static-content'
   defaults:
     _controller: '\Drupal\d8_training\Controller\StaticMenuController::content'
@@ -26,7 +26,7 @@ d8_training.node_detail:
 d8_training.multiple_nids:
   path: '/list/{node1}/{node2}'
   defaults:
-    _controller: '\Drupal\d8_training\Controller\NodeDetailController::multiple_nodes'
+    _controller: '\Drupal\d8_training\Controller\NodeDetailController::multipleNodes'
   requirements:
       _permission: 'access content'
   options:

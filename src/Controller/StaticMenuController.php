@@ -18,7 +18,7 @@ class StaticMenuController extends ControllerBase{
    */
   public function content() {
     $build = [
-      '#markup' => t('Hello! I am your node listing page.'),
+      '#markup' => t('Hello! I am your view listing page.'),
     ];
     return $build;
   }

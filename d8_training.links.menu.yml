@@ -1,0 +1,5 @@
+d8_training.admin:
+  title: 'Static Content'
+  description: 'Example of menu links concept in D8'
+  parent: system.admin_config_development
+  route_name: d8_training.static_content

@@ -21,13 +21,15 @@ d8_training.node_detail:
     _controller: '\Drupal\d8_training\Controller\NodeDetailController::content'
     _title: 'Node Detail'
   requirements:
-    _permission: 'access content'
-    _role: 'authenticated+content_editor'
+    _custom_access_check: 'TRUE'
+
 
 d8_training.multiple_nids:
   path: '/list/{node1}/{node2}'
   defaults:
     _controller: '\Drupal\d8_training\Controller\NodeDetailController::multipleNodes'
+  requirements:
+    _role: 'authenticated+content_editor'
   options:
     parameters:
       node1:

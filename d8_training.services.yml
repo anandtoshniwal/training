@@ -1,0 +1,6 @@
+services:
+  d8_training.custom_access_check:
+    class: Drupal\d8_training\Access\CustomAccessCheck
+    arguments: ['@current_user', '@entity.manager']
+    tags:
+      - { name: access_check, applies_to: _custom_access_check }

@@ -1,0 +1,31 @@
+<?php
+
+/**
+ * @file
+ * Install, update and uninstall functions for the d8_training module.
+ */
+
+use Drupal\Core\Database\Database;
+
+/**
+ * Creates table d8_demo for storing dic form values.
+ */
+function d8_training_update_8001() {
+  $spec = array(
+    'description' => 'My description',
+    'fields' => array(
+      'FirstName' => array(
+        'description' => 'user First name',
+        'type' => 'text',
+        'not null' => TRUE,
+      ),
+      'LastName' => array(
+        'description' => 'User last name',
+        'type' => 'text',
+        'not null' => TRUE,
+      ),
+    ),
+  );
+  $schema = Database::getConnection()->schema();
+  $schema->createTable('d8_demo', $spec);
+}

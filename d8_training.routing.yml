@@ -44,3 +44,11 @@ d8_training.simple_form:
    _form: '\Drupal\d8_training\Form\SimpleForm'
  requirements:
    _permission: 'access content'
+
+d8_training.dic_form:
+ path: '/dic-form'
+ defaults:
+   _title: 'Dic form'
+   _form: '\Drupal\d8_training\Form\DicForm'
+ requirements:
+   _permission: 'access content'

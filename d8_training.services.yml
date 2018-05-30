@@ -4,3 +4,7 @@ services:
     arguments: ['@current_user', '@entity.manager']
     tags:
       - { name: access_check, applies_to: _custom_access_check }
+
+  d8_training.database_operation:
+    class: Drupal\d8_training\d8TrainingDatabaseStorage
+    arguments: ['@database']

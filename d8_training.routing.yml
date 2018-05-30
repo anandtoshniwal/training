@@ -36,3 +36,11 @@ d8_training.multiple_nids:
         type: entity:node
       node2:
         type: entity:node
+
+d8_training.simple_form:
+ path: '/simple-form'
+ defaults:
+   _title: 'Simple form'
+   _form: '\Drupal\d8_training\Form\SimpleForm'
+ requirements:
+   _permission: 'access content'

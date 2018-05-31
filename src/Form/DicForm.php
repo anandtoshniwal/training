@@ -148,6 +148,7 @@ class DicForm extends FormBase {
     }
     $form['states_wrapper']['states'] = [
       '#type' => 'select',
+      '#title' => $this->t('State'),
       '#empty_option' => '- select -',
       '#options' => $states,
       '#default_value' => NULL,

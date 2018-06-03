@@ -8,3 +8,7 @@ services:
   d8_training.database_operation:
     class: Drupal\d8_training\d8TrainingDatabaseStorage
     arguments: ['@database']
+
+  d8_training.weather_info:
+    class: Drupal\d8_training\d8TrainingWeatherInfo
+    arguments: ['@http_client', '@config.factory']

@@ -1,0 +1,25 @@
+<?php
+
+/**
+ * @file d8_training module file.
+ */
+
+/**
+ * Implements hook_theme()
+ */
+function d8_training_theme() {
+  return [
+    'weather_info_block' => [
+      'variables' => [
+        'temp' => NULL,
+        'city' => NULL,
+        'pressure' => NULL,
+        'humidity' => NULL,
+        'temp_min' => NULL,
+        'temp_max' => NULL,
+        'wind_speed' => NULL,
+      ],
+      'template' => 'block-weather-info',
+    ],
+  ];
+}

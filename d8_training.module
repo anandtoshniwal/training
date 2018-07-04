@@ -3,6 +3,8 @@
 /**
  * @file d8_training module file.
  */
+use Drupal\d8_training\Event\NodeInsertEvent;
+use Drupal\node\NodeInterface;
 
 /**
  * Implements hook_theme()
@@ -23,3 +25,12 @@ function d8_training_theme() {
     ],
   ];
 }
+
+  /**
+   * @param \Drupal\node\NodeInterface $node
+   */
+  function d8_training_node_insert(NodeInterface $node) {
+    // Dispatch the node insert event so that subscribers can act accordingly.
+     \Drupal::service('event_dispatcher')->dispatch(NodeInsertEvent::NODE_INSERT, new NodeInsertEvent($node));
+  }
+

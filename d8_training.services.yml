@@ -15,6 +15,6 @@ services:
 
   d8_training.request_handler:
       class: Drupal\d8_training\EventSubscriber\RequestHandlerSubscriber
-      arguments: ['@current_route_match']
+      arguments: ['@current_route_match', '@logger.factory']
       tags:
         - { name: 'event_subscriber' }

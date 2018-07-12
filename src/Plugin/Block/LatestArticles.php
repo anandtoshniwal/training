@@ -94,6 +94,9 @@ class LatestArticles extends BlockBase implements ContainerFactoryPluginInterfac
         ->range(0, 3)
         ->execute();
     
+    //Retrieving user email address.
+    $markup = 'Email: ' . $this->currentUser->getEmail() . '<br>';
+
     foreach ($query as $key => $value) {
       $markup .=  $value->nid . ': ' . $value->title . '<br>';
       $values[] = 'node:' . $value->nid;
@@ -104,6 +107,7 @@ class LatestArticles extends BlockBase implements ContainerFactoryPluginInterfac
     '#cache' => [
       'keys' => ['d8_training_tags_nid'],
       'tags' => $values,
+      'contexts' => ['user']
       ],
     ];
   }

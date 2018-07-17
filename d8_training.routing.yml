@@ -60,3 +60,15 @@ d8_training.admin_settings_form:
     _title: 'Weather config'
   requirements:
     _permission: 'administer site configuration'
+
+d8_training.upcasting:
+  path: '/upcast/{config_name}'
+  defaults:
+    _controller: '\Drupal\d8_training\Controller\d8TrainingParamUpcast::content'
+    _title: 'parameter upcasting'
+  options:
+    parameters:
+      config_name:
+        type: d8_training:config_converter
+  requirements:
+    _permission: 'access content'

@@ -14,7 +14,13 @@ services:
     arguments: ['@http_client', '@config.factory']
 
   d8_training.request_handler:
-      class: Drupal\d8_training\EventSubscriber\RequestHandlerSubscriber
-      arguments: ['@current_route_match', '@logger.factory']
-      tags:
-        - { name: 'event_subscriber' }
+    class: Drupal\d8_training\EventSubscriber\RequestHandlerSubscriber
+    arguments: ['@current_route_match', '@logger.factory']
+    tags:
+      - { name: 'event_subscriber' }
+
+  d8_training.config_converter:
+    class: Drupal\d8_training\ParamConverter\ConfigParamConverter
+    arguments: ['@config.factory']
+    tags:
+      - { name: paramconverter }

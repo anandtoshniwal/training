@@ -1,7 +1,7 @@
 <?php
 namespace Drupal\d8_training\Normalizer;
+
 use Drupal\serialization\Normalizer\ContentEntityNormalizer;
-use Drupal\Core\Datetime\DrupalDateTime;
 
 class CustomDataNormalizer extends ContentEntityNormalizer{
  

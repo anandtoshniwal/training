@@ -24,3 +24,9 @@ services:
     arguments: ['@config.factory']
     tags:
       - { name: paramconverter }
+
+  d8_training.typed_data:
+    class: Drupal\d8_training\Normalizer\CustomDataNormalizer
+    arguments: ['@entity.manager']
+    tags:
+      - { name: normalizer, priority: 10 }
